@@ -1,0 +1,75 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+
+white_wine:
+  type: pandas.CSVDataSet
+  filepath: https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv
+  load_args:
+    sep: ';'
+
+red_wine:
+  type: pandas.CSVDataSet
+  filepath: https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
+  load_args:
+    sep: ';'
+
+white_wine_categorized:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/white_wine_categorized.csv
+
+red_wine_categorized:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/red_wine_categorized.csv
+
+all_wine:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/all_wine.csv
+
+all_wine_dummy:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/all_wine_dummy.csv
+
+X_train:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/X_train.csv
+
+X_test:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/X_test.csv
+
+y_train:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/y_train.csv
+
+y_test:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/y_test.csv
+
+X_train_scaled:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/X_train_scaled.csv
+
+X_test_scaled:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/X_test_scaled.csv
+
+logit:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/logit.pickle
+  versioned: true
+
+knn:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/knn.pickle
+  versioned: true
+
+xgb:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/xgb.pickle
+  versioned: true
+
+
+
+

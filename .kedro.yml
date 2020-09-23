@@ -1,0 +1,6 @@
+context_path: wine_quality.run.ProjectContext
+project_name: "Wine Quality"
+project_version: "0.16.5"
+package_name: "wine_quality"
+hooks:
+  - wine_quality.hooks.project_hooks
